@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">GuessNumber</string>
+    <string name="etNombrejugador" translatable="false"></string>
+    <string name="etNumeroIntentos" translatable="false" />
+    <string name="tvLabelNombreJugador">Nombre del jugador:</string>
+    <string name="tvLabelNumeroIntentos">Introduce el numero de intentos:</string>
+    <string name="btnJugar">¡A jugar!</string>
+    <string name="strValidacionNombre">El nombre del jugador no puede estar vacio.</string>
+    <string name="strValidacionIntentos">El número de intentos no puede estar vacio o ser menor que 0.</string>
+    <string name="btnComprobar">Comprobar</string>
+    <string name="strLabelPosibleNumero">Introduce el numero que crees que es:</string>
+    <string name="strValidacionNumero">Debes introducir un número.</string>
+    <string name="strNumeroMenor">El numero introducido es mayor que el número a adivinar.</string>
+    <string name="strNumeroMayor">El número introducido es menor que el número a adivinar.</string>
+    <string name="strNumeroAdivinado">¡Has adivinado el número!</string>
+    <string name="btnReiniciar">Volver a jugar</string>
+    <string name="strNumeroNoAdivinado">no has adivinado el numero</string>
+</resources>

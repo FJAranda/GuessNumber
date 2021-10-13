@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/clConfigActivity"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ConfigActivity"
+    android:padding="20dp"
+    >
+
+    <TextView
+        android:id="@+id/tvLabelNombreJugador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:labelFor="@id/etNombreJugador"
+        android:text="@string/tvLabelNombreJugador"
+        app:layout_constraintStart_toStartOf="@+id/etNombreJugador"
+        app:layout_constraintTop_toTopOf="@id/clConfigActivity"
+        android:paddingBottom="10dp"></TextView>
+
+    <EditText
+        android:id="@+id/etNombreJugador"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/etNombrejugador"
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@id/tvLabelNombreJugador"></EditText>
+
+    <TextView
+        android:id="@+id/tvLabelNumeroIntentos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:labelFor="@id/etNumeroIntentos"
+        android:text="@string/tvLabelNumeroIntentos"
+        app:layout_constraintStart_toStartOf="@+id/etNumeroIntentos"
+        app:layout_constraintTop_toBottomOf="@id/etNombreJugador"
+        android:paddingTop="20dp"
+        android:paddingBottom="10dp"></TextView>
+    <EditText
+        android:id="@+id/etNumeroIntentos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/etNumeroIntentos"
+        android:inputType="number"
+        app:layout_constraintTop_toBottomOf="@id/tvLabelNumeroIntentos">
+    </EditText>
+
+    <Button
+        android:id="@+id/btnJugar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnJugar"
+        app:layout_constraintBottom_toBottomOf="@id/clConfigActivity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etNumeroIntentos"></Button>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
