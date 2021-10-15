@@ -6,12 +6,14 @@
     <string name="btnJugar">¡Let\'s Play!</string>
     <string name="strValidacionNombre">Player name can\'t be empty.</string>
     <string name="strValidacionIntentos">Try number can\'t be empty or less than 0.</string>
-    <string name="btnComprobar">Comprobar</string>
-    <string name="strLabelPosibleNumero">Introduce el numero que crees que es:</string>
-    <string name="strValidacionNumero">Debes introducir un número.</string>
-    <string name="strNumeroMenor">El numero introducido es mayor que el número a adivinar.</string>
-    <string name="strNumeroMayor">El número introducido es menor que el número a adivinar.</string>
-    <string name="strNumeroAdivinado">¡Has adivinado el número!</string>
-    <string name="btnReiniciar">Volver a jugar</string>
-    <string name="strNumeroNoAdivinado">no has adivinado el numero</string>
+    <string name="btnComprobar">Check</string>
+    <string name="strLabelPosibleNumero">Insert the number you think:</string>
+    <string name="strValidacionNumero">You must insert a number.</string>
+    <string name="strNumeroMenor">Number inserted is bigger than number to guess.</string>
+    <string name="strNumeroMayor">Number inserted is smaller than number to guess.</string>
+    <string name="btnReiniciar">Play Again</string>
+    <string name="strPena">¡What\'s a pitty! </string>
+    <string name="strEstupendo">¡Great! </string>
+    <string name="strNumeroAdivinar">, the number you have to guess was </string>
+    <string name="strNumeroIntentosUsados">. The number of tries you have used was:</string>
 </resources>

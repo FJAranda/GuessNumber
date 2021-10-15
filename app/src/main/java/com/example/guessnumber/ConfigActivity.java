@@ -9,10 +9,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.guessnumber.data.Game;
+
+import java.util.Random;
+
 /**
  * Activity Inicial de configuración del juego de adivinar el número.
  *
- * Esta activity recibe el nombre del jugador y el numero de intentos para adivinar el numero y envía estos datos a PlayActivity.
+ * Esta activity recoge el nombre del jugador y el numero de intentos para adivinar el numero y envía estos datos a PlayActivity.
  *
  * @author Francisco Javier Aranda Caro
  * @Version 2021.1210
@@ -52,10 +56,14 @@ public class ConfigActivity extends AppCompatActivity {
                 strValidacion = getResources().getString(R.string.strValidacionIntentos);
                 Toast.makeText(this, strValidacion, Toast.LENGTH_LONG).show();
             }else{
+                Game juego = new Game();
+                juego.setAdivinado(false);
+                juego.setNombre(nombre);
+                juego.setIntentos(intentos);
+                juego.setNumeroAleatorio(new Random().nextInt(100) +1);
                 Intent intent = new Intent(ConfigActivity.this, PlayActivity.class);
                 Bundle bundle = new Bundle();
-                bundle.putString("nombre", nombre);
-                bundle.putInt("intentos", intentos);
+                bundle.putSerializable("juego", juego);
                 intent.putExtras(bundle);
                 startActivity(intent);
             }

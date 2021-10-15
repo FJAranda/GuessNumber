@@ -3,11 +3,25 @@ package com.example.guessnumber;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.guessnumber.data.Game;
+
+import java.text.MessageFormat;
+
+
+/**
+ * Activity final del juego de adivinar el número.
+ *
+ * Esta activity recibe los datos del resultado del juego y se los muestra al usuario, además tiene un boton para volver a jugar.
+ *
+ * @author Francisco Javier Aranda Caro
+ * @Version 2021.1510
+ */
 public class EndPlayActivity extends AppCompatActivity {
 
     TextView tvMensajeFinal;
@@ -28,15 +42,12 @@ public class EndPlayActivity extends AppCompatActivity {
         });
 
         Bundle bundle = this.getIntent().getExtras();
-        boolean adivinado = bundle.getBoolean("adivinado");
-        String nombre = bundle.getString("nombre");
-        String mensaje = bundle.getString("mensaje");
+        Game juego = (Game)bundle.getSerializable("juego");
         int intentos = bundle.getInt("intentos");
-        int numero = bundle.getInt("numero");
-        if (adivinado) {
-            tvMensajeFinal.setText(nombre + ", " + mensaje + " " + numero + " en tan solo " + intentos + " intentos.");
+        if (juego.isAdivinado()) {
+            tvMensajeFinal.setText(getResources().getString(R.string.strEstupendo)+ juego.getNombre() + getResources().getString(R.string.strNumeroAdivinar) + juego.getNumeroAleatorio() + getResources().getString(R.string.strNumeroIntentosUsados) + intentos);
         }else{
-            tvMensajeFinal.setText(nombre + ", " + mensaje + " " + numero + ". Has usado " + intentos + " intentos.");
+            tvMensajeFinal.setText(getResources().getString(R.string.strPena)+ juego.getNombre() + getResources().getString(R.string.strNumeroAdivinar) + juego.getNumeroAleatorio() + getResources().getString(R.string.strNumeroIntentosUsados) + intentos);
         }
     }
 

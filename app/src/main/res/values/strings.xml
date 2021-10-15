@@ -12,7 +12,9 @@
     <string name="strValidacionNumero">Debes introducir un número.</string>
     <string name="strNumeroMenor">El numero introducido es mayor que el número a adivinar.</string>
     <string name="strNumeroMayor">El número introducido es menor que el número a adivinar.</string>
-    <string name="strNumeroAdivinado">¡Has adivinado el número!</string>
     <string name="btnReiniciar">Volver a jugar</string>
-    <string name="strNumeroNoAdivinado">no has adivinado el numero</string>
+    <string name="strPena">¡Qué pena! </string>
+    <string name="strEstupendo">¡Estupendo! </string>
+    <string name="strNumeroAdivinar">, el numero a adivinar era el</string>
+    <string name="strNumeroIntentosUsados">. Los intentos usados han sido:</string>
 </resources>
